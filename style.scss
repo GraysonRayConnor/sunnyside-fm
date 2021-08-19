@@ -32,8 +32,9 @@ body {
 	font-family: $secondaryFont;
 }
 .attribution {
-	font-size: 11px;
+	font-size: 1.2rem;
 	text-align: center;
+	margin-bottom: 1.5rem;
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
@@ -66,6 +67,9 @@ nav {
 	.hamburger-icon {
 		width: 2.5rem;
 	}
+	.desktop-nav {
+		display: none;
+	}
 }
 
 header {
@@ -95,7 +99,7 @@ header {
 		font-family: $primaryFont;
 		font-size: 3rem;
 		width: 80%;
-		font-weight: bolder;
+		font-weight: 900;
 	}
 	p {
 		padding: 2.5rem 0 3.5rem 0;
@@ -139,9 +143,17 @@ header {
 	@include flexIt(column, center, center);
 	.graphic-design-box {
 		@include backgroundImg("images/mobile/image-graphic-design.jpg");
+		color: hsl(167, 40%, 24%);
+		p {
+			color: hsl(167, 40%, 24%);
+		}
 	}
 	.photography-box {
 		@include backgroundImg("images/mobile/image-photography.jpg");
+		color: hsl(198, 62%, 26%);
+		p {
+			color: hsl(198, 62%, 26%);
+		}
 	}
 }
 
@@ -156,22 +168,7 @@ header {
 		font-weight: 900;
 	}
 	p {
-		margin-bottom: 5rem;
 		margin: 3rem auto 5rem auto;
-	}
-}
-
-.graphic-design-box {
-	color: hsl(167, 40%, 24%);
-	p {
-		color: hsl(167, 40%, 24%);
-	}
-}
-
-.photography-box {
-	color: hsl(198, 62%, 26%);
-	p {
-		color: hsl(198, 62%, 26%);
 	}
 }
 
@@ -186,7 +183,7 @@ header {
 		font-family: $primaryFont;
 		color: hsl(210, 4%, 67%);
 	}
-	.customer-testimonial-box {
+	.client-testimonials-box {
 		@include flexIt(column, center, center);
 		width: 100%;
 	}
@@ -205,7 +202,7 @@ header {
 			padding: 3rem 0;
 			font-size: 1.75rem;
 			color: hsl(232, 10%, 55%);
-			width: 90%;
+			width: 85%;
 		}
 		.client-title {
 			@include flexIt(column, center, center);
@@ -270,5 +267,284 @@ footer {
 		@include flexIt(row, space-evenly, center);
 		width: 75%;
 		margin-bottom: 6rem;
+	}
+}
+
+@media only screen and (min-width: 414px) {
+	html {
+		font-size: 11px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	html {
+		font-size: 15px;
+	}
+
+	p {
+		width: 75%;
+	}
+
+	header {
+		@include backgroundImg("images/desktop/image-header.jpg");
+	}
+
+	.sec1 {
+		.egg-box {
+			@include backgroundImg("images/desktop/image-transform.jpg");
+		}
+	}
+	.sec2 {
+		.cup-box {
+			@include backgroundImg("images/desktop/image-stand-out.jpg");
+		}
+	}
+	.sec3 {
+		.graphic-design-box {
+			@include backgroundImg("images/desktop/image-graphic-design.jpg");
+		}
+
+		.photography-box {
+			@include backgroundImg("images/desktop/image-photography.jpg");
+		}
+	}
+
+	.sec4 {
+		.client {
+			p {
+				width: 70%;
+			}
+		}
+	}
+
+	.sec5 {
+		#pic1 {
+			@include backgroundImg("images/desktop/image-gallery-milkbottles.jpg");
+		}
+		#pic2 {
+			@include backgroundImg("images/desktop/image-gallery-orange.jpg");
+		}
+		#pic3 {
+			@include backgroundImg("images/desktop/image-gallery-cone.jpg");
+		}
+		#pic4 {
+			@include backgroundImg("images/desktop/image-gallery-sugarcubes.jpg");
+		}
+	}
+
+	.footer-socials {
+		img {
+			width: 1.5rem;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	html {
+		font-size: 11px;
+	}
+	p {
+		font-size: 1.75rem;
+	}
+
+	nav {
+		width: 93%;
+		.hamburger-icon {
+			display: none;
+		}
+		.desktop-nav {
+			width: 30%;
+			@include flexIt(row, space-between, center);
+			a {
+				color: white;
+				font-size: 1.3rem;
+			}
+			#contact-btn {
+				color: black;
+				background-color: white;
+				width: 10rem;
+				border-radius: 25px;
+				height: 4rem;
+				border: none;
+				font-family: $primaryFont;
+			}
+		}
+	}
+	header {
+		h1 {
+			margin: 3rem auto;
+		}
+	}
+
+	.transform-brand-box {
+		width: 50%;
+		height: 50rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.info-box {
+		text-align: left;
+		@include flexIt(column, center, flex-start);
+		margin: 0 auto;
+		width: 70%;
+		height: 35rem;
+		h2 {
+			width: 100%;
+			font-size: 3.25rem;
+		}
+		p {
+			width: 100%;
+			text-align: left;
+			padding: 1.5rem 0 3rem 0;
+		}
+		a {
+			margin-left: 0.5rem;
+		}
+	}
+	.sec1 {
+		@include flexIt(row-reverse, center, center);
+		.egg-box {
+			height: 50rem;
+			width: 50%;
+		}
+	}
+
+	.stand-out-box {
+		width: 50%;
+		height: 50rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.sec2 {
+		@include flexIt(row, center, center);
+		.cup-box {
+			height: 50rem;
+			width: 50%;
+		}
+	}
+	.sec3 {
+		@include flexIt(row, center, center);
+		.graphic-design-box {
+			width: 50%;
+			height: 60rem;
+		}
+		.photography-box {
+			width: 50%;
+			height: 60rem;
+		}
+		.picture-info {
+			p {
+				margin: 2rem auto 7rem auto;
+			}
+		}
+	}
+	.sec4 {
+		.client {
+			margin-bottom: 5rem;
+			p {
+				width: 40%;
+			}
+		}
+	}
+	.sec5 {
+		.pretty-pic {
+			height: 45rem;
+		}
+	}
+
+	footer {
+		.footer-nav {
+			width: 50%;
+		}
+		.footer-socials {
+			width: 20%;
+		}
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	header {
+		h1 {
+			margin: 7rem auto;
+			font-size: 5rem;
+		}
+
+		.arrow-icon {
+			margin-bottom: 25rem;
+		}
+		.header-logo {
+			width: 13rem;
+		}
+	}
+
+	.info-box {
+		h2 {
+			width: 80%;
+		}
+		p {
+			padding: 2rem 0 3.5rem 0;
+		}
+	}
+
+	.sec1 {
+		.egg-box {
+			height: 60rem;
+		}
+	}
+	.sec2 {
+		@include flexIt(row, center, center);
+		.cup-box {
+			height: 60rem;
+		}
+	}
+	.sec3 {
+		@include flexIt(row, center, center);
+		.graphic-design-box {
+			height: 70rem;
+		}
+		.photography-box {
+			height: 70rem;
+		}
+		.picture-info {
+			h2 {
+				margin-top: 50rem;
+			}
+		}
+	}
+	.sec4 {
+		padding: 12rem 0;
+		.client-testimonials-box {
+			@include flexIt(row, center, center);
+			width: 85%;
+			margin: 0 auto;
+			.client {
+				height: 35rem;
+				margin: 0 3rem;
+				width: 60%;
+				p {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.sec5 {
+		@include flexIt(row, center, center);
+		.pretty-pic-div {
+			width: 50%;
+		}
+		.pretty-pic {
+			width: 50%;
+		}
+	}
+	footer {
+		.footer-nav {
+			width: 30%;
+		}
+		.footer-socials {
+			width: 12%;
+		}
 	}
 }

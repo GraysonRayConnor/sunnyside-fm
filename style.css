@@ -17,8 +17,9 @@ body {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1.2rem;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .attribution a {
@@ -66,6 +67,10 @@ nav .header-logo {
 
 nav .hamburger-icon {
   width: 2.5rem;
+}
+
+nav .desktop-nav {
+  display: none;
 }
 
 header {
@@ -126,7 +131,7 @@ header .arrow-icon {
   font-family: "Fraunces", serif;
   font-size: 3rem;
   width: 80%;
-  font-weight: bolder;
+  font-weight: 900;
 }
 
 .info-box p {
@@ -221,6 +226,11 @@ header .arrow-icon {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  color: #25564b;
+}
+
+.sec3 .graphic-design-box p {
+  color: #25564b;
 }
 
 .sec3 .photography-box {
@@ -228,6 +238,11 @@ header .arrow-icon {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  color: #19536b;
+}
+
+.sec3 .photography-box p {
+  color: #19536b;
 }
 
 .picture-info {
@@ -244,24 +259,7 @@ header .arrow-icon {
 }
 
 .picture-info p {
-  margin-bottom: 5rem;
   margin: 3rem auto 5rem auto;
-}
-
-.graphic-design-box {
-  color: #25564b;
-}
-
-.graphic-design-box p {
-  color: #25564b;
-}
-
-.photography-box {
-  color: #19536b;
-}
-
-.photography-box p {
-  color: #19536b;
 }
 
 .sec4 {
@@ -277,7 +275,7 @@ header .arrow-icon {
   color: #a7abae;
 }
 
-.sec4 .customer-testimonial-box {
+.sec4 .client-testimonials-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -310,7 +308,7 @@ header .arrow-icon {
   padding: 3rem 0;
   font-size: 1.75rem;
   color: #818498;
-  width: 90%;
+  width: 85%;
 }
 
 .sec4 .client .client-title {
@@ -470,5 +468,382 @@ footer .footer-socials {
           align-items: center;
   width: 75%;
   margin-bottom: 6rem;
+}
+
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+  p {
+    width: 75%;
+  }
+  header {
+    background-image: url("images/desktop/image-header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .sec1 .egg-box {
+    background-image: url("images/desktop/image-transform.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .sec2 .cup-box {
+    background-image: url("images/desktop/image-stand-out.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .sec3 .graphic-design-box {
+    background-image: url("images/desktop/image-graphic-design.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .sec3 .photography-box {
+    background-image: url("images/desktop/image-photography.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .sec4 .client p {
+    width: 70%;
+  }
+  .sec5 #pic1 {
+    background-image: url("images/desktop/image-gallery-milkbottles.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .sec5 #pic2 {
+    background-image: url("images/desktop/image-gallery-orange.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .sec5 #pic3 {
+    background-image: url("images/desktop/image-gallery-cone.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .sec5 #pic4 {
+    background-image: url("images/desktop/image-gallery-sugarcubes.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .footer-socials img {
+    width: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 11px;
+  }
+  p {
+    font-size: 1.75rem;
+  }
+  nav {
+    width: 93%;
+  }
+  nav .hamburger-icon {
+    display: none;
+  }
+  nav .desktop-nav {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav .desktop-nav a {
+    color: white;
+    font-size: 1.3rem;
+  }
+  nav .desktop-nav #contact-btn {
+    color: black;
+    background-color: white;
+    width: 10rem;
+    border-radius: 25px;
+    height: 4rem;
+    border: none;
+    font-family: "Fraunces", serif;
+  }
+  header h1 {
+    margin: 3rem auto;
+  }
+  .transform-brand-box {
+    width: 50%;
+    height: 50rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .info-box {
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 auto;
+    width: 70%;
+    height: 35rem;
+  }
+  .info-box h2 {
+    width: 100%;
+    font-size: 3.25rem;
+  }
+  .info-box p {
+    width: 100%;
+    text-align: left;
+    padding: 1.5rem 0 3rem 0;
+  }
+  .info-box a {
+    margin-left: 0.5rem;
+  }
+  .sec1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sec1 .egg-box {
+    height: 50rem;
+    width: 50%;
+  }
+  .stand-out-box {
+    width: 50%;
+    height: 50rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sec2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sec2 .cup-box {
+    height: 50rem;
+    width: 50%;
+  }
+  .sec3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sec3 .graphic-design-box {
+    width: 50%;
+    height: 60rem;
+  }
+  .sec3 .photography-box {
+    width: 50%;
+    height: 60rem;
+  }
+  .sec3 .picture-info p {
+    margin: 2rem auto 7rem auto;
+  }
+  .sec4 .client {
+    margin-bottom: 5rem;
+  }
+  .sec4 .client p {
+    width: 40%;
+  }
+  .sec5 .pretty-pic {
+    height: 45rem;
+  }
+  footer .footer-nav {
+    width: 50%;
+  }
+  footer .footer-socials {
+    width: 20%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  header h1 {
+    margin: 7rem auto;
+    font-size: 5rem;
+  }
+  header .arrow-icon {
+    margin-bottom: 25rem;
+  }
+  header .header-logo {
+    width: 13rem;
+  }
+  .info-box h2 {
+    width: 80%;
+  }
+  .info-box p {
+    padding: 2rem 0 3.5rem 0;
+  }
+  .sec1 .egg-box {
+    height: 60rem;
+  }
+  .sec2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sec2 .cup-box {
+    height: 60rem;
+  }
+  .sec3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sec3 .graphic-design-box {
+    height: 70rem;
+  }
+  .sec3 .photography-box {
+    height: 70rem;
+  }
+  .sec3 .picture-info h2 {
+    margin-top: 50rem;
+  }
+  .sec4 {
+    padding: 12rem 0;
+  }
+  .sec4 .client-testimonials-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 85%;
+    margin: 0 auto;
+  }
+  .sec4 .client-testimonials-box .client {
+    height: 35rem;
+    margin: 0 3rem;
+    width: 60%;
+  }
+  .sec4 .client-testimonials-box .client p {
+    width: 100%;
+  }
+  .sec5 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sec5 .pretty-pic-div {
+    width: 50%;
+  }
+  .sec5 .pretty-pic {
+    width: 50%;
+  }
+  footer .footer-nav {
+    width: 30%;
+  }
+  footer .footer-socials {
+    width: 12%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
