@@ -48,6 +48,12 @@ a:active {
 	text-decoration: none;
 }
 
+ul,
+li {
+	list-style-type: none;
+	text-decoration: none;
+}
+
 p {
 	font-size: 1.5rem;
 	letter-spacing: 1px;
@@ -57,6 +63,7 @@ p {
 }
 
 nav {
+	position: relative;
 	width: 85%;
 	padding: 3rem 0;
 	margin-bottom: 1rem;
@@ -69,6 +76,32 @@ nav {
 	}
 	.desktop-nav {
 		display: none;
+	}
+}
+
+.mobile-nav {
+	display: none;
+}
+.mobile-nav.show {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	background: white;
+	margin-top: 7rem;
+	padding: 3rem 0;
+	a {
+		padding: 1.75rem 0;
+		font-size: 2rem;
+		color: hsl(232, 10%, 55%);
+	}
+	#mobile-contact-btn {
+		background-color: hsl(51, 100%, 49%);
+		font-family: $primaryFont;
+		border: none;
+		width: 13rem;
+		height: 5rem;
+		border-radius: 25px;
 	}
 }
 
@@ -270,17 +303,34 @@ footer {
 	}
 }
 
+@media only screen and (max-width: 320px) {
+	html {
+		font-size: 8px;
+	}
+}
+
 @media only screen and (min-width: 414px) {
 	html {
 		font-size: 11px;
 	}
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 575px) {
+	html {
+		font-size: 13px;
+	}
+}
+
+@media only screen and (min-width: 625px) {
 	html {
 		font-size: 15px;
 	}
+}
 
+@media only screen and (min-width: 768px) {
+	html {
+		font-size: 16px;
+	}
 	p {
 		width: 75%;
 	}
@@ -352,12 +402,16 @@ footer {
 		.hamburger-icon {
 			display: none;
 		}
+		.mobile-nav {
+			display: none;
+		}
 		.desktop-nav {
-			width: 30%;
+			width: 40%;
 			@include flexIt(row, space-between, center);
+
 			a {
 				color: white;
-				font-size: 1.3rem;
+				font-size: 1.5rem;
 			}
 			#contact-btn {
 				color: black;
@@ -466,6 +520,11 @@ footer {
 }
 
 @media only screen and (min-width: 1440px) {
+	nav {
+		.desktop-nav {
+			width: 30%;
+		}
+	}
 	header {
 		h1 {
 			margin: 7rem auto;
